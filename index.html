@@ -22,10 +22,7 @@
         <div class="spinner-inner"></div>
         <div class="spinner-logo">
           <!-- Gaming controller logo icon -->
-          <svg viewBox="0 0 512 512">
-            <path
-              d="M416 128H96c-53 0-96 43-96 96v80c0 53 43 96 96 96h320c53 0 96-43 96-96v-80c0-53-43-96-96-96zm-240 176h-32v32c0 8.8-7.2 16-16 16s-16-7.2-16-16v-32h-32c-8.8 0-16-7.2-16-16s7.2-16 16-16h32v-32c0-8.8 7.2-16 16-16s16 7.2 16 16v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16zm176-32c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm48 48c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z" />
-          </svg>
+          <img src="LO.jpeg" alt="Logo" style="width: 100%; height: 100%; object-fit: contain;">
         </div>
       </div>
       <div class="loader-text">Initializing Uplink...</div>
@@ -41,8 +38,7 @@
     <div class="nav-container">
       <!-- Clicking logo redirects to home -->
       <a href="index.html" class="logo" id="header-logo-link">
-
-        <span>STACKLY</span>
+        <div class="logo-icon" style="color: black;"><img src="LO.jpeg" alt="Logo" style="width: 100%; height: 100%; object-fit: contain;"></div>
       </a>
 
       <!-- Desktop Nav Menu -->
@@ -79,11 +75,21 @@
 
   <!-- Mobile Overlay Menu Drawer -->
   <div class="mobile-overlay" id="mobile-menu-overlay">
+    <button class="mobile-close" aria-label="Close Mobile Menu">&times;</button>
+
+    <!-- Logo at top -->
+    <div class="logo" style="justify-content: center; margin-bottom: 25px;">
+      <div class="logo-icon"><img src="LO.jpeg" alt="Logo" style="width: 100%; height: 100%; object-fit: contain;"></div><span>STACKLY</span>
+    </div>
+    <div class="mobile-menu-divider"></div>
+
     <ul class="mobile-overlay-menu">
-      <li><a href="index.html" class="nav-link" id="mobile-nav-home">Home</a></li>
+      <li><a href="index.html" class="nav-link mobile-active" id="mobile-nav-home">
+          <span class="mobile-menu-icon">🏠</span> Home
+        </a></li>
       <li>
         <a href="#" class="nav-link mobile-dropdown-trigger" id="mobile-nav-dropdown">
-          Games <span class="submenu-indicator">▼</span>
+          <span class="mobile-menu-icon">🎮</span> Games <span class="submenu-indicator">▼</span>
         </a>
         <ul class="mobile-dropdown">
           <li class="dropdown-item"><a href="404.html" id="mobile-submenu-action">Action / RPG</a></li>
@@ -91,13 +97,30 @@
           <li class="dropdown-item"><a href="404.html" id="mobile-submenu-indie">Indie Spot</a></li>
         </ul>
       </li>
-      <li><a href="404.html" class="nav-link" id="mobile-nav-pricing">Pricing</a></li>
-      <li><a href="404.html" class="nav-link" id="mobile-nav-news">News</a></li>
-      <li><a href="404.html" class="nav-link" id="mobile-nav-tournaments">Tournaments</a></li>
-      <li><a href="404.html" class="nav-link" id="mobile-nav-contact">Contact Us</a></li>
-      <li><a href="404.html" class="nav-link" id="mobile-nav-login">Login</a></li>
-      <li><a href="404.html" class="nav-link" id="mobile-nav-signup">Sign Up</a></li>
+      <li><a href="404.html" class="nav-link" id="mobile-nav-pricing">
+          <span class="mobile-menu-icon">💎</span> Pricing
+        </a></li>
+      <li><a href="404.html" class="nav-link" id="mobile-nav-news">
+          <span class="mobile-menu-icon">📰</span> News
+        </a></li>
+      <li><a href="404.html" class="nav-link" id="mobile-nav-tournaments">
+          <span class="mobile-menu-icon">🏆</span> Tournaments
+        </a></li>
+      <li><a href="404.html" class="nav-link" id="mobile-nav-contact">
+          <span class="mobile-menu-icon">✉️</span> Contact Us
+        </a></li>
+      <li><a href="404.html" class="nav-link" id="mobile-nav-login">
+          <span class="mobile-menu-icon">🔑</span> Login
+        </a></li>
+      <li><a href="404.html" class="nav-link" id="mobile-nav-signup">
+          <span class="mobile-menu-icon">🚀</span> Sign Up
+        </a></li>
     </ul>
+
+    <!-- CTA Button at bottom -->
+    <div class="mobile-menu-cta">
+      <a href="404.html" class="btn-primary" id="mobile-cta-play">⚡ Start Playing</a>
+    </div>
   </div>
 
   <main>
@@ -568,8 +591,7 @@
       <div class="footer-brand">
         <!-- Footer logo. Clicking logo redirects to home -->
         <a href="index.html" class="logo footer-logo" id="footer-logo-link">
-
-          <span>STACKLY</span>
+          <div class="logo-icon"><img src="LO.jpeg" alt="Logo" style="width: 100%; height: 100%; object-fit: contain;"></div>
         </a>
         <p class="footer-about">
           STACKLY is a leading global gaming platform dedicated to connecting competitive players and providing

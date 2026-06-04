@@ -10,12 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
   body.classList.add('loading-lock');
 
   const loadingMessages = [
-    'Establishing uplink...',
-    'Loading game assets...',
-    'Calibrating neural-link...',
-    'Spawning server entities...',
-    'Compiling graphic shaders...',
-    'Entering simulation...'
+    'Connecting Players...',
+    'Game On Loading...',
+    'Loading Experience...',
+    'Unlocking New Levels...'
   ];
 
   let start = null;
@@ -101,6 +99,25 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileOverlay.classList.remove('open');
         body.classList.remove('loading-lock');
       });
+    });
+
+    // Close button (×) inside mobile overlay
+    const mobileCloseBtn = mobileOverlay.querySelector('.mobile-close');
+    if (mobileCloseBtn) {
+      mobileCloseBtn.addEventListener('click', () => {
+        mobileToggle.classList.remove('open');
+        mobileOverlay.classList.remove('open');
+        body.classList.remove('loading-lock');
+      });
+    }
+
+    // Close menu when clicking on the dark backdrop itself
+    mobileOverlay.addEventListener('click', (e) => {
+      if (e.target === mobileOverlay) {
+        mobileToggle.classList.remove('open');
+        mobileOverlay.classList.remove('open');
+        body.classList.remove('loading-lock');
+      }
     });
   }
 
