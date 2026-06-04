@@ -48,8 +48,13 @@ body {
   font-family: 'Orbitron', sans-serif;
 }
 
+html:has(body.loading-lock) {
+  overflow: hidden;
+}
+
 body.loading-lock {
   overflow: hidden;
+  touch-action: none;
 }
 
 /* Typography styling */
@@ -453,6 +458,7 @@ header.scrolled {
   visibility: hidden;
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), visibility 0.4s ease;
   overflow-y: auto;
+  overscroll-behavior: none;
 }
 
 .mobile-overlay.open {

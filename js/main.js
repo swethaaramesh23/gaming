@@ -113,7 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close menu when clicking on the dark backdrop itself
     mobileOverlay.addEventListener('click', (e) => {
-      if (e.target === mobileOverlay) {
+      const rect = mobileOverlay.getBoundingClientRect();
+      if (e.clientX < rect.left) {
         mobileToggle.classList.remove('open');
         mobileOverlay.classList.remove('open');
         body.classList.remove('loading-lock');
